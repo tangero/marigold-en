@@ -2,20 +2,9 @@
 layout: default
 ---
 
-<!-- start feedwind code --> 
-<script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Nahr%C3%A1v%C3%A1m%20%C4%8Dl%C3%A1nky" data-fw-param="168280/"></script> 
-<!-- end feedwind code -->
 
 <article class="post detailed">
   <h1>{{ page.title }}</h1>
-
-  {% if page.categories contains "AI" %}
-  <div class="posts">
-    <blockquote>
-      <p>💡 Firemní <a href="https://www.aivefirmach.cz/">workshopy o umělé inteligenci</a> - pojďme se zamyslet nad tím, jak se vaší firmy dotkne AI a jak se na to připravit!</p>
-    </blockquote>
-  </div>
-  {% endif %}
 
   <div>
     <p class="author_title">{{site.author}}  ·
@@ -24,27 +13,16 @@ layout: default
 
        {% if page.path %}
       <a href="{{ site.github_repo }}/blob/main/{{ page.path }}" target="_blank">
-        Opravit 📃
+        Update article 📃
       </a>
   {% endif %}
     
     </p>
 
     {% if page.last_modified_at %}
-    <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Aktualizováno: {{ page.last_modified_at | date: "%-d.%-m.%Y" }})</p>
+    <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: {{ page.last_modified_at | date: "%-d.%-m.%Y" }})</p>
 
     {% endif %}
-    <div class="post-tags">
-      {% if post %}
-        {% assign categories = post.categories %}
-      {% else %}
-        {% assign categories = page.categories %}
-      {% endif %}
-      {% for category in categories %}
-        <a href="{{site.baseurl}}/rubrika/#{{category|slugize}}">{{category}}</a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
-      {% endfor %}
-    </div>
    
   </div>
 
