@@ -9,13 +9,13 @@ name: OrchestrAI
 author: Patrick Zandl
 
 # Short bio or description (displayed in the header)
-description: Technologie a Svět
+description: 
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /images/patrick-mensi.jpg
 
 languages: ["en", "cs"]
-default_lang: "cs"
+default_lang: "en"
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -73,24 +73,6 @@ collections:
 
 permalink: /item/:title/
 
-# Definice vícejazyčných článků
-defaults:
-  -
-    scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      layout: "post"
-      permalink: /item/:title/
-      lang: "cs"  # Přidáno explicitní nastavení jazyka pro české články
-  -
-    scope:
-      path: "_posts/en"
-      type: "posts"
-    values:
-      layout: "post"
-      permalink: /en/item/:title/
-      lang: "en"
 
 
 # The release of Jekyll Now that you're using
@@ -121,14 +103,6 @@ include: ['_pages']
 
 paginate: 15
 paginate_path: /page:num/
-
-# Konfigurace Jekyll-feed
-feed:
-  - path: feed.xml
-    posts_limit: 20
-    excerpt_only: false
-    meta:
-    - lang: cs
 
 # Exclude these files from your production _site
 exclude:
