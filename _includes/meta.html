@@ -1,0 +1,50 @@
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <link href="https://fed.brid.gy/" rel="alternate" type="application/activity+json">
+
+    {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+    {% elsif page.description %}
+    <meta property="og:description" content="{{ page.description }}" />
+    {% else %}
+    <meta property="og:description" content="{{ site.description }}" />
+    {% endif %}
+    <meta name="author" content="{{ site.name }}" />
+
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="twitter:title" content="{{ page.title }}" />
+    {% endif %}
+
+    {% if post.thumbnail %}
+    <!-- post.thumbnail -->
+    {% assign thumbnail_url = post.thumbnail | replace: 'http://', 'https://' %}
+    <meta property="og:image" content="https://res.cloudinary.com/dvwv5cne3/image/fetch/w_1200,h_630,c_fill,g_auto,f_auto,q_auto/{{ thumbnail_url }}"/>
+    <meta property="twitter:image" content="https://res.cloudinary.com/dvwv5cne3/image/fetch/w_1024,h_512,c_fill,g_auto,f_auto,q_auto/{{ thumbnail_url }}"/>
+    {% elsif page.thumbnail %}
+    <!-- page.thumbnail -->
+    {% assign thumbnail_url = page.thumbnail | replace: 'http://', 'https://' %}
+        <!-- page.thumbnail {{ page.thumbnail }} | {{ post.thumbnail }} -->
+    <meta property="og:image" content="https://res.cloudinary.com/dvwv5cne3/image/fetch/w_1200,h_630,c_fill,g_auto,f_auto,q_auto/{{ thumbnail_url }}"/>
+    <meta property="twitter:image" content="https://res.cloudinary.com/dvwv5cne3/image/fetch/w_1024,h_512,c_fill,g_auto,f_auto,q_auto/{{ thumbnail_url }}"/>
+    {% elsif page.image %}
+    <!-- page.image -->
+    <meta property="og:image" content="{{ site.url }}{{ page.image }}"/>
+    <meta property="twitter:image" content="{{ site.url }}{{ page.image }}"/>
+    {% else %}
+    <!-- else -->    
+    <meta property="og:image" content="{{ site.url }}{{ site.avatar }}"/>
+    <meta property="twitter:image" content="{{ site.url }}{{ site.avatar }}"/>
+    {% endif %}
+
+    <meta property="og:site_name" content="Marigold.cz | Technologie a Společnost"/>
+
+    {% if page.tipue_search_active or layout.tipue_search_active %}
+<link rel="stylesheet" href="{{ "/assets/tipuesearch/css/normalize.css" | relative_url }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+<link rel="stylesheet" href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
+<script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+<script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+{% endif %}
