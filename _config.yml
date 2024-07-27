@@ -9,7 +9,7 @@ name: OrchestrAI
 author: Patrick Zandl
 
 # Short bio or description (displayed in the header)
-description: 
+description: Technology & People
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /images/patrick-mensi.jpg
@@ -59,13 +59,7 @@ github_repo: https://github.com/tangero/marigold-en
 collections: 
   posts:
     output: true
-    permalink: /:lang/item/:title/
-  ai:
-    output: true
-    permalink: /ai/:title/
-  mobilnisite:
-    output: true
-    permalink: /mobilnisite/:title/    
+    permalink: /item/:title/ 
 
 #
 # !! You don't need to change any of the configuration flags below !!

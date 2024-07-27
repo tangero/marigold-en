@@ -20,22 +20,7 @@ layout: default
   <div>
     <p class="author_title">{{site.author}}  ·
 {% assign m = page.date | date: "%-m" %}
-{{ page.date | date: "%-d." }}
-{% case m %}
-  {% when '1' %}leden
-  {% when '2' %}únor
-  {% when '3' %}březen
-  {% when '4' %}duben
-  {% when '5' %}květen
-  {% when '6' %}červen
-  {% when '7' %}červenec
-  {% when '8' %}srpen
-  {% when '9' %}září
-  {% when '10' %}říjen
-  {% when '11' %}listopad
-  {% when '12' %}prosinec
-{% endcase %}
-{{ page.date | date: "%Y" }} 
+{{ page.date | date: "%-d.%m.%Y" }}
 
        {% if page.path %}
       <a href="{{ site.github_repo }}/blob/main/{{ page.path }}" target="_blank">
@@ -78,70 +63,14 @@ layout: default
 
   </div>
 
-  <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
-<hyvor-talk-comments website-id="11492" page-id="" page-language="cs"></hyvor-talk-comments>
 
 <!-- include welcomments/comments.html website_id = "ztUcqjd5JisGO2s1U7LvUxySG" -->
 
 
-  {% if page.collection == 'ai' and page.layout == 'post' %}
-  <div class="ai-rubric-link">
-    <blockquote> 
-    ⚡️ <a href="/ai/">Pokračujte do rubriky AI</a>
-    </blockquote>
-  </div>
-{% endif %}
-
-  {% if page.categories contains "Mobilní sítě" or page.categories contains "3G" or page.categories contains "4G" or page.categories contains "5G" or page.categories contains "5G Advanced" %}
-  <div class="posts">
-    <blockquote>
-      <p>🗼 Pokračujte dále na <a href="/mobilnisite/">Seriál Mobilní sítě</a></p>
-    </blockquote>
-  </div>
-  {% elsif page.categories contains "AI" %}
-  <div class="posts">
-    <blockquote>
-      <p>💡 Firemní <a href="https://www.aivefirmach.cz/">workshopy o umělé inteligenci</a> - pojďme se zamyslet nad tím, jak se vaší firmy dotkne AI a jak se na to připravit!</p>
-    </blockquote>
-  </div>
-  {% endif %}
-
-<!-- Tady začíná odkazování na featured články -->
-
-  {% assign featured_posts = site.posts | where: "featured", true | where_exp: "post", "post.url != page.url" %}
-  {% if featured_posts.size > 0 %}
-    {% assign shuffled_posts = featured_posts | sort: 'date' | sample: featured_posts.size %}
-    <div class="featured-posts">
-      <h3>💡 Co je tu dalšího zajímavého ke čtení?</h3>
-      <table>
-        <tbody>
-          {% for post in shuffled_posts limit:2 %}
-            <tr>
-              <td>
-                <a href="{{ post.url }}">👉{{ post.title }}</a>
-                <p class="excerpt">
-                  {% if post.content contains '<!-- more -->' %}
-                    {{ post.content | split:'<!-- more -->' | first | strip_html | truncate: 160 }}
-                  {% else %}
-                    {{ post.content | strip_html | truncate: 160 }}
-                  {% endif %}
-                </p>
-              </td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  {% endif %}  
   
-  <div class="posts">
-    <h3>Chcete tyto články emailem?</h3>
-    <iframe src="https://zandl.substack.com/embed" width="480" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-  </div>
-
 
   <div>
-    <p><span class="share-box">Sdílejte článek:</span> <a href="http://twitter.com/share?text={{ page.title }}&url={{site.url}}{{page.url}}" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Facebook</a></p>
+    <p><span class="share-box">Share article:</span> <a href="http://twitter.com/share?text={{ page.title }}&url={{site.url}}{{page.url}}" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Facebook</a></p>
 
     <p>
     <div class="PageNavigation">
