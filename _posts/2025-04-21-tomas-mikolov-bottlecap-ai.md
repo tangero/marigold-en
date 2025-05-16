@@ -6,7 +6,7 @@ lang: en
 layout: post
 original_lang: cs
 post_excerpt: "Artificial intelligence rarely makes waves in the Czech Republic, but the departure of Tomáš Mikolov, a leading AI scientist, from the Czech Technical University in Prague (ČVUT) was just such an event. The announcement came at the AI Zážeh spolupráce conference two weeks ago, and since then it has been discussed from all angles. I met with Tomáš Mikolov to hear his reasons firsthand."
-thumbnail: https://www.marigold.cz/assets/tomas-mikolov.png
+thumbnail: https://www.orchestrai.eu/assets/tomas-mikolov.png
 title: 💥Why did Tomas Mikolov leave Czech AI science?
 ---
 
