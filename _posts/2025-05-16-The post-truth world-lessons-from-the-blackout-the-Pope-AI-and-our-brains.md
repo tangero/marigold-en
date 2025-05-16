@@ -7,7 +7,7 @@ layout: post
 original_lang: cs
 post_excerpt: "We have just experienced two very instructive events that have helped us better understand the dangers posed by AI. It brings _post-truth_—a complete imitation of knowledge that lacks the one thing it needs: knowledge. Everything else is in place. I was sitting in the front row, so I’ll give you a report."
 thumbnail: https://www.marigold.cz/assets/nehoda-ai-agenta.png
-title: 🏄🏻‍♂️ The post-truth world: lessons from the blackout, the Pope, AI, and our brains
+title: "🏄🏻‍♂️ The post-truth world: lessons from the blackout, the Pope, AI, and our brains"
 ---
 
 
