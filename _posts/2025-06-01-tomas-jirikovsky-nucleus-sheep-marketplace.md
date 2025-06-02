@@ -6,7 +6,7 @@ lang: en
 layout: post
 original_lang: cs
 post_excerpt: The incredible story of a Czech dark web marketplace operator who decided to share his bitcoins with the Ministry of Justice. You won't believe what happened next!
-thumbnail: /assets/tomas_jirikovsky.jpeg
+thumbnail: https://www.orchestrai.eu/assets/tomas_jirikovsky.jpeg
 title: 🐑 Sheep Marketplace – how Tomáš Jiříkovský and the Minister of Justice came to Bitcoin
 ---
 
