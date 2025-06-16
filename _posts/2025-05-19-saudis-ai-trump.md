@@ -6,7 +6,7 @@ lang: en
 layout: post
 original_lang: cs
 post_excerpt: What's the best way to deal with the problem of not having your own AI and fearing artificial intelligence poverty? Invite Trump with his technosuit, escort Air Force One with honorary planes, and promise to shell out hundreds of billions of dollars.  
-thumbnail: /assets/trump-a-saud.jpg
+thumbnail: https://www.orchestrai.eu/assets/trump-a-saud.jpg
 title: 🇸🇦 The Saudis are spending hundreds of billions on AI and new friends
 ---
 
